@@ -1,0 +1,12 @@
+version: "2"
+services:
+  mysql: # master
+    image: mysql:5.7.21
+    volumes: # 挂载 下边每行前边的`-`代表这个东西是数组的一个元素.就是说volumes属性的值是一个数组
+      - ./docker/mysql/data:/var/lib/mysql # mysql数据文件位置
+      - ./docker/mysql/conf:/etc/mysql/conf.d # mysql配置文件位置
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      TZ: Asia/Shanghai
