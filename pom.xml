@@ -8,6 +8,11 @@
   <artifactId>springboot2-gateway-test</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <modules>
+    <module>service-user</module>
+    <module>center-eureka</module>
+    <module>center-gateway</module>
+  </modules>
   <repositories>
     <repository>
       <id>aliyun</id>
